@@ -1,8 +1,119 @@
 /*#region Common utilities */
+
+/* Import del font da google */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap');
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+body {
+    font-family: 'Poppins', sans-serif; 
+    background: linear-gradient(to right bottom, #ea2c62, #52057b )no-repeat;   
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    background-color: #52057b;
+    padding: 20px;
+    border-radius: 5px;
+    width: 380px;
+}
+
+h1 {
+    font-size: 30px;
+    color: #fff;
+    text-align: center;
+    margin-bottom: 10px;
+}
 /*#endregion */
+
+/*#region Form control */
+
+.form-control {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    color: #fff;
+    border-bottom: 1px solid #eee;
+}
+
+.form-control label {
+    cursor: pointer;
+}
+
+.form-control input[type=number]{
+    width: 60px;
+}
+
+/*#region P-header */
+.p-header {
+    position: relative;
+}
+
+.p-header input,
+.p-header button,
+.form-control input[type=number],
+#submit {
+    outline: none;
+    border: none;
+    border-radius: 4px;   
+}
+
+.p-header input {
+    width: 100%;
+    height: 100%;
+    background-color: #ea2c62;
+    padding: 14px;
+    color: #fff;
+    font-size: 15px;
+}
+
+.p-header button,
+.form-control input[type=number] {
+    padding: 3px 5px;
+    background-color: #eee;
+}
+
+.p-header button {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    cursor: pointer;
+}
+/*#endregion */
+
+/*#region Submit button */
+
+#submit {
+    width: 100%;
+    padding: 15px;
+    margin-top: 10px;
+    background-color: #3282b8;
+    font-size: 16px;
+    font-weight: 400;
+    color: #fff;
+    cursor: pointer;
+    transition: all 0.4s;
+    text-transform: uppercase;
+}
+
+#submit:hover {
+    background-color: #ea2c62;
+}
+
+#submit:active{
+    background-color: #3282b8;
+}
+
+/*#endregion */
+
+
+/*#endregion Form control*/
+
