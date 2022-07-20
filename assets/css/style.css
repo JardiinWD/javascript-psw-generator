@@ -81,12 +81,15 @@ h1 {
     background-color: #eee;
 }
 
-.p-header button {
+.p-header .copy {
     position: absolute;
     bottom: 0;
     right: 0;
     cursor: pointer;
 }
+
+
+
 /*#endregion */
 
 /*#region Submit button */

@@ -49,3 +49,24 @@ function generatePassword(l, initial) {
     return pass // Ritorno il valore della password
 }
 
+/* Implementazione del tasto copy password */
+const copy = document.getElementById("copy") // Prendo il tasto copy tramite il suo id
+
+/* Gli aggiungo un evento al click per recuperare la password */
+copy.addEventListener("click", () => {
+    /* console.log("Sono il pulsante copy"); */
+    // Analisi condizione. se il valore dell'input password fosse vuoto
+    if (password.value == "") {
+        /* console.log("Non c'è niente qua.."); */
+        alert("Clicca Genera per creare una password sicura!")
+    } else {
+        /* console.log("Qui c'è qualcosa!"); */
+        password.select();
+        document.execCommand("copy");
+        alert("La password è stata copiata!")
+    }
+})
+
+/* Implementazione del tasto reset */
+const reset = document.getElementById("reset")
+console.log(`${reset}`);
