@@ -88,6 +88,20 @@ h1 {
     cursor: pointer;
 }
 
+.p-header .reset {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    right: 0;
+}
+
+.p-header .copy,
+.p-header .reset {
+    width: 50px;
+}
+
+
+
 
 
 /*#endregion */

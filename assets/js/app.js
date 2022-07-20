@@ -27,8 +27,19 @@ submitButton.addEventListener("click", () => {
     (pNumber.checked) ? initial += number : ""; // Condizione Numeri
     (pSymbol.checked) ? initial += symbol : ""; // Condizione Simboli
 
-    /* Valore della password generata tramite una funzione invocata */
-    password.value = generatePassword(pLength.value, initial)
+    /* Devo dargli la condizione che se va oltre i 30 caratteri non genera niente */
+    /* 
+    SE il valore della password è Maggiore o uguale a 30 non genera niente
+    ALTRIMENTI può generare tranquillamente la password
+    */
+    if (pLength.value > 30) {
+        alert("Non va bene, troppo lunga");
+        password.value = empty
+    } else {
+        /* Valore della password generata tramite una funzione invocata */
+        password.value = generatePassword(pLength.value, initial)
+    }
+
 })
 
 /**
@@ -69,4 +80,15 @@ copy.addEventListener("click", () => {
 
 /* Implementazione del tasto reset */
 const reset = document.getElementById("reset")
-console.log(`${reset}`);
+/* console.log(reset); // Verifica del reset */
+
+/* Gli aggiungo l'evento per resettare il valore della password */
+reset.addEventListener("click", () => {
+    /* console.log("Sono il tasto reset e sono stato appena premuto"); */
+    password.value = empty // gli do valore stringa vuota
+    /* A questo punto avvio anche il ciclo per dire all'utente di generarne una */
+    if (password.value == "") {
+        alert("Questo campo è già vuoto, prova a generare una nuova password!")
+    }
+})
+
